@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box1{
+
+            height: 120px;
+            margin:50px auto ;
+            text-align: center;
+        }
+
+        .box2{
+
+            margin-bottom: 15px;
+
+        }
+       .btn1{
+            background: white;
+
+            outline: none;
+            border: 1px solid darkgrey;
+            padding: 1px 14px;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+
+        }
+        .after{
+            transition-duration: 2s;
+            -moz-transition-duration: 2s; /* Firefox 4 */
+            -webkit-transition-duration: 2s; /* Safari 和 Chrome */
+
+            color: cornflowerblue;
+            margin-bottom: 15px;
+
+
+
+        }
+        .line{
+            width: 0;
+            background:cornflowerblue;
+            border-bottom: 3px solid cornflowerblue;
+            margin-bottom: 17px;
+            visibility: hidden;
+        }
+        .line-after{
+
+            transition-duration: 2s;
+            -moz-transition-duration: 2s; /* Firefox 4 */
+            -webkit-transition-duration: 2s; /* Safari 和 Chrome */
+            border-bottom: 3px solid cornflowerblue;
+            width: 70px;
+            margin-bottom: 17px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1"> <div class="box2">前端学院</div>
+    <div class="line"></div>
+    <button class="btn1">切换样式</button>
+</div>
+<script>
+    var btn = document.querySelector(".btn1");
+    var box1 = document.querySelector(".box1");
+    var line = document.querySelector(".line");
+    btn.addEventListener('click', function (ev) {
+        if(box1.firstElementChild.className === "after") {box1.firstElementChild.className = "box2"; line.className="line";}
+        else
+        {box1.firstElementChild.className="after"; line.className = "line-after";}
+    }
+        )
+</script>
+</body>
+</html>
